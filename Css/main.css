@@ -1,0 +1,165 @@
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: "Ubuntu", sans-serif;
+}
+.wrapper{
+    margin: 0;
+    max-width: 100%;
+
+
+}
+header{
+    padding: 10px 0;
+    clear: both;
+}
+
+nav{
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px 0;
+
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 10px;
+
+}
+nav li{
+    display: inline-block;
+}
+nav a{
+    background-color: rgb(169, 169, 206);
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+#main{
+    width: 100%;
+
+}
+#first{
+    background-color: beige;
+    padding: 5px;
+
+}
+
+img{
+    max-width: 100%;
+}
+
+#second{
+    background-color: azure;
+    padding: 5px;
+}
+footer{
+    clear: both;
+    background-color: black;
+    text-align: center;
+    padding: 35px;
+    color: darkgrey;
+}
+/*dispositivo mobil*/
+@media screen and (min-whidth:1200px) {
+    .wrapper{
+        max-width: 1000px;
+    }
+    
+}
+@media screen and (min-whidth: 800px){
+    header{
+        text-align: center;
+    }
+    body{
+        background-color: azure;
+    }
+    nav{
+        float: left;
+        width: 20%;
+
+    }
+    #main{
+        float: right;
+        width: 80%;
+
+    }
+    nav li{
+        display: block;
+        padding: 10px 0px;
+        width: 90%;
+    }
+    nav{
+        padding: 0px;
+    }
+    nav ul{
+        padding: 0%;
+        margin: 0%;
+    }
+}
+@media screen and (min-width: 520px){
+    #first{
+        width: 48%;
+        float: left;
+    }
+    #second{
+        width: 48%;
+        float: right;
+    
+    }
+}
+.wrapper > article {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+}
+
+.wrapper > aside {
+    background-color: rgb(216, 184, 173);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea a la izquierda */
+}
+
+.wrapper > aside img:last-of-type {
+    margin-left: auto; /* Alinea la última imagen a la derecha */
+}
+.wrapper{
+    display: grid;
+    grid-template-rows:20% 50px 500px auto ;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+}
+.wrapper>*{
+    border: 1px solid black;
+}
+.wrapper>header{
+    background-color: rgb(148, 179, 248);
+    grid-column-start: 1 ;
+    grid-column-end: 3;
+}
+.wrapper>nav{
+    background-color: rgb(185, 175, 231);
+    grid-column-end: 1;
+    grid-column-end: 3;
+}
+
+.wrapper>article{
+    background-color: bisque;
+}
+
+.wrapper>aside{
+    background-color: rgb(216, 184, 173);
+}
+
+.wrapper>footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(238, 211, 211);
+}
